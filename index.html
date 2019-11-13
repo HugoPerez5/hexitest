@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="BlueAppDemo">
+<head>
+    <script src="https://blueappio.github.io/blueapp.io/blueapp.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="app/hexiwear.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body>
+<h2>Demo</h2>
+<div ng-controller="MainController as main">
+	<button ng-click="main.buttonClicked()">Connect</button>
+    <ul class="unstyled">
+        <li>
+            Name: {{main.hexiwear.name}}
+        </li>
+        <li>
+            Id: {{main.hexiwear.id}}
+        </li>
+        <li>
+            Manufacturer: {{main.hexiwear.manufacturerName}}
+        </li>
+        <li>
+            Accelerometer:
+            <dd> x: {{main.hexiwear.motionData.x}} </dd>
+            <dd> y: {{main.hexiwear.motionData.y}} </dd>
+            <dd> z: {{main.hexiwear.motionData.z}} </dd>
+        </li>
+        <br>
+        <li>
+            Heart Rate
+            <dd> hr: {{main.hexiwear.motionData.hr}} </dd>
+        </li>
+        <li>
+            Level
+            <dd> btt: {{main.hexiwear.motionData.btt}} </dd>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
